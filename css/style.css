@@ -25,3 +25,61 @@ body {
     animation: gradientShift 15s ease infinite; /* Animates the background gradient */
 }
 
+/* Smooth gradient shift animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 30px;
+}
+
+.paw-icon {
+    font-size: 100px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Heading and Text */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Progress Bar */
+.progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
+}
+
+#progress-bar {
+    width: 30%; /* Initial width set to 30% */
+    height: 100%;
+    background-color: #3eb36f; /* Green color */
+    transition: width 1s ease-in-out; /* Smooth transition for width change */
+}

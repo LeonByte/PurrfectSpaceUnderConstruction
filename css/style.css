@@ -1,0 +1,27 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border do not affect element's width/height */
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, 
+        rgba(34, 139, 34, 0.9),   /* Forest Green */
+        rgba(50, 205, 50, 0.7),   /* Lime Green */
+        rgba(0, 128, 0, 0.8),     /* Green */
+        rgba(255, 255, 255, 0.6)); /* Soft White */
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: gradientShift 15s ease infinite; /* Animates the background gradient */
+}
+

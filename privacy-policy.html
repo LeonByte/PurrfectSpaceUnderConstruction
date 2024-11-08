@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
     <meta charset="UTF-8"> <!-- Character encoding for proper display of special characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Compatibility for older versions of Internet Explorer -->
-    <title>Building a Purrfect Space: Your Pawsome Hub!</title>
+    <title>Privacy Policy - Building a Purrfect Space: Your Pawsome Hub!</title>
+
 
     <!-- Standard Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -27,25 +28,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style-pp.css">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="logo">
-                <!-- FontAwesome Cat Paw Icon -->
-                <i class="fas fa-paw paw-icon"></i>
-            </div>
-            <h1>Excuse the Chaos - I'm Making Things Purrfect! 🐾</h1>
-            <p>I'm currently building a brand new site, and things are a little wild around here!</p>
-            <p>But don't worry - I'm paws-itively working around the clock to get everything ready for you. Check back soon - it's going to be pawsome!</p>
-                      
 
-            <div class="progress">
-                <div id="progress-bar"></div>
-            </div>
+    <!-- Privacy Policy Header -->
+    <header class="privacy-header">
+        <div class="container">
+            <!-- Home Button -->
+            <a href="index.html" class="home-button">Back to Home</a>
+            <h1>Privacy Policy</h1>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <h2>1. Introduction</h2>
+        <p>Welcome to our "Building a Purrfect Space: Your Pawsome Hub!" website. This privacy policy outlines the types of information we do not collect and how we respect your privacy.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <p>At this time, we do not collect any personal data from visitors to this website. No forms, registrations, or tracking technologies (such as cookies or web analytics) are being used.</p>
+
+        <h2>3. Cookies</h2>
+        <p>Our website does not use cookies or any other tracking technologies. This means we do not store any data related to your usage of this site.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We do not use third-party services such as analytics or advertising networks on this site. Once the site is live, any third-party services used will be disclosed in an updated privacy policy.</p>
+
+        <h2>5. Changes to this Privacy Policy</h2>
+        <p>As we launch new features or services that may involve data collection, we will update this privacy policy to reflect those changes. Please check back for updates.</p>
+
+        <h2>6. Contact Information</h2>
+        <p>If you have any questions or concerns about this privacy policy, feel free to contact us at <a href="https://github.com/LeonByte/">info@LeonByte</a>.</p>
+    </main>
 
 <!-- Footer -->
 <footer id="footer">
@@ -66,33 +80,6 @@
     </div>
 </footer>
     <script src="js/script.js"></script>
-
-<!-- Cookie Consent Banner -->
-<div id="cookieConsentBanner" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #333; color: #fff; padding: 5px 0; text-align: center; display: none; z-index: 9999; font-size: 0.8rem;">
-    <p style="margin: 0; line-height: 1.4; font-size: 0.8rem;">We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-    <button id="acceptCookies" style="background-color: #f1d600; border: none; padding: 5px 10px; cursor: pointer; font-size: 0.8rem;">Accept</button>
-    <button id="declineCookies" style="background-color: #e74c3c; border: none; padding: 5px 10px; cursor: pointer; font-size: 0.8rem; margin-left: 10px;">Decline</button>
-    <a href="/privacy-policy.html" style="color: #f1d600; text-decoration: none; margin-left: 10px; font-size: 0.8rem;" target="_blank">Learn more</a>
-</div>
-
-<script>
-    // Check if cookie consent has been given or declined
-    if (!localStorage.getItem("cookieConsent") && !localStorage.getItem("cookieDecline")) {
-        document.getElementById("cookieConsentBanner").style.display = "block";
-    }
-
-    // When the user accepts cookies
-    document.getElementById("acceptCookies").onclick = function() {
-        localStorage.setItem("cookieConsent", "true");
-        document.getElementById("cookieConsentBanner").style.display = "none";
-    };
-
-    // When the user declines cookies
-    document.getElementById("declineCookies").onclick = function() {
-        localStorage.setItem("cookieDecline", "true");
-        document.getElementById("cookieConsentBanner").style.display = "none";
-    };
-</script>
 
 </body>
 </html>

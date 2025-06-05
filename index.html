@@ -1,98 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> <!-- Character encoding for proper display of special characters -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Compatibility for older versions of Internet Explorer -->
-    <title>Building a Purrfect Space: Your Pawsome Hub!</title>
-
-    <!-- Standard Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- Multiple Favicon Sizes for Different Devices -->
-    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png"> <!-- Used for browsers and desktops -->
-    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png"> <!-- Smaller size for older browsers -->
-    <link rel="icon" sizes="96x96" href="images/favicon-180x180.png"> <!-- For Apple devices -->
-
-    <!-- Apple Touch Icon for iOS devices -->
-    <link rel="apple-icon" href="images/apple-icon.png">
-
-    <!-- Google Fonts - Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Nerd Fonts CDN for additional icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nerd-fonts@2.0.0/css/nerd-fonts.min.css">
-
-    <!-- FontAwesome for general icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">    
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <div class="logo">
-                <!-- FontAwesome Cat Paw Icon -->
-                <i class="fas fa-paw paw-icon"></i>
-            </div>
-            <h1>Excuse the Chaos - I'm Making Things Purrfect! 🐾</h1>
-            <p>I'm currently building a brand new site, and things are a little wild around here!</p>
-            <p>But don't worry - I'm paws-itively working around the clock to get everything ready for you. Check back soon - it's going to be pawsome!</p>
-                      
-
-            <div class="progress">
-                <div id="progress-bar"></div>
-            </div>
-        </div>
-    </div>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="footer-content">
-        <span class="footer-text">&bull; <span>&#169;</span> 2024
-            <a href="https://erobert.se" class="footer-link" target="_blank">@</a>
-            <span class="footer-text">LeonByte Design</span>
-            <span class="footer-icon" aria-label="Spinning Cog"><i class="fa fa-cog fa-spin fa-lg fa-fw"></i></span>&bull;
-        </span>
-        <div class="footer-icons">
-            <a href="https://www.w3.org/html/" class="footer-icon" aria-label="HTML5" target="_blank"><i class="fab fa-html5"></i></a>
-            <a href="https://www.w3.org/Style/CSS/" class="footer-icon" aria-label="CSS3" target="_blank"><i class="fab fa-css3"></i></a>
-            <a href="https://fontawesome.com/icons" class="footer-icon" aria-label="FontAwesome" target="_blank"><i class="fab fa-font-awesome"></i></a>
-            <a href="https://github.com/LeonByte/" class="footer-icon" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.python.org/" class="footer-icon" aria-label="Python" target="_blank"><i class="fab fa-python"></i></a>
-            <a href="https://opensource.org/licenses/MIT" class="footer-icon" aria-label="MIT License" target="_blank"><i class="fab fa-gitlab"></i></a> <!-- Using GitLab logo as a placeholder for MIT -->
-        </div>
-    </div>
-</footer>
-    <script src="js/script.js"></script>
-
-<!-- Cookie Consent Banner -->
-<div id="cookieConsentBanner" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #333; color: #fff; padding: 5px 0; text-align: center; display: none; z-index: 9999; font-size: 0.8rem;">
-    <p style="margin: 0; line-height: 1.4; font-size: 0.8rem;">We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-    <button id="acceptCookies" style="background-color: #f1d600; border: none; padding: 5px 10px; cursor: pointer; font-size: 0.8rem;">Accept</button>
-    <button id="declineCookies" style="background-color: #e74c3c; border: none; padding: 5px 10px; cursor: pointer; font-size: 0.8rem; margin-left: 10px;">Decline</button>
-    <a href="/privacy-policy.html" style="color: #f1d600; text-decoration: none; margin-left: 10px; font-size: 0.8rem;" target="_blank">Learn more</a>
-</div>
-
-<script>
-    // Check if cookie consent has been given or declined
-    if (!localStorage.getItem("cookieConsent") && !localStorage.getItem("cookieDecline")) {
-        document.getElementById("cookieConsentBanner").style.display = "block";
-    }
-
-    // When the user accepts cookies
-    document.getElementById("acceptCookies").onclick = function() {
-        localStorage.setItem("cookieConsent", "true");
-        document.getElementById("cookieConsentBanner").style.display = "none";
-    };
-
-    // When the user declines cookies
-    document.getElementById("declineCookies").onclick = function() {
-        localStorage.setItem("cookieDecline", "true");
-        document.getElementById("cookieConsentBanner").style.display = "none";
-    };
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

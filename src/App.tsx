@@ -61,7 +61,7 @@ const SocialNav = ({ theme }: { theme: 'dark' | 'light' }) => {
     { href: "https://github.com/LeonByte", icon: Github, label: "GitHub Profile", hoverColor: "hover:text-gray-400" },
     { href: "https://t.me/LE0Nbyte", icon: Send, label: "Telegram", hoverColor: "hover:text-blue-400" },
     { href: "https://signal.me/#eu/MhNhKmpFitQ7EgMlhZjj4Fsa5iUDsjuBC1cVQEq0houuu7EGb8FC0qp5v0768BW-", icon: MessageSquare, label: "Signal", hoverColor: "hover:text-blue-500" },
-    { href: "https://linkedin.com/in/leonbyte", icon: Linkedin, label: "LinkedIn", hoverColor: "hover:text-blue-600" }
+    { href: "https://linkedin.com/in/", icon: Linkedin, label: "LinkedIn", hoverColor: "hover:text-blue-600" }
   ]
 
   return (

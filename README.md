@@ -1,147 +1,180 @@
-# Building a Purrfect Space: Your Pawsome Hub! - MIT Project
+# <img src="public/logo.svg" alt="PurrfectSpace Logo" width="120" height="120"> PurrfectSpace Under Construction
+  
+  A simple, customizable "under construction" page with a cat theme for domain parking and temporary site placeholders.
+  
+  [![React](https://img.shields.io/badge/react-19.1.0-blue?style=flat-square&logo=react)](https://react.dev/versions)
+  [![TypeScript](https://img.shields.io/badge/typescript-5.8.3-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-8.html)
+  [![Tailwind](https://img.shields.io/badge/tailwind-4.1.5-blue?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/docs/installation/using-vite)
+  [![Version](https://img.shields.io/badge/version-v2.0.0-green)](https://github.com/LeonByte/PurrfectSpaceUnderConstruction/releases)
+  [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://opensource.org/licenses/MIT)
+  [![Pages](https://img.shields.io/badge/github-pages-ready-orange?style=flat-square)](https://leonbyte.github.io/PurrfectSpaceUnderConstruction/)
 
-![Project Banner](images/banner-image.png)  
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Build Status](https://img.shields.io/github/workflow/status/LeonByte/PurrfectSpaceUnderConstruction/CI?label=build&logo=github)
+## Overview
 
-A simple, customizable "Under Construction" page designed with a creative gradient background, progress bar animation, and a playful tone. This project is open-source, and anyone is free to contribute or adapt it for their own use.
+When you register a new domain, registrars usually show a generic parking page. This project gives you a better alternative - a clean, customizable page that you control.
 
-## Demo
+**Common use cases:**
+- New domains while planning your site
+- Temporary placeholder during development  
+- Consistent branding across multiple domains
+- Alternative to registrar parking pages
 
-[Live Demo](https://erobert.se)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo_Preview-green?style=flat-square)](https://leonbyte.github.io/PurrfectSpaceUnderConstruction/)
+  ![Project Banner](public/og-image.png)
 
----
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Links](#links)
-8. [Contact](#contact)
-9. [Acknowledgments](#acknowledgments)
+1. [Overview](#overview)
+2. [Quick Setup](#quick-setup)
+3. [Multi-Domain Parking Setup](#multi-domain-parking-setup)
+4. [Features](#eatures)
+5. [Customization](#customization)
+6. [Development](#development)
+7. [Domain Setup](#domain-setup)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Contact](#contact)
 
----
+## Quick Setup
 
-## Introduction
+### Option 1: Fork & Deploy (Recommended)
+1. Fork this repository
+2. Enable GitHub Pages in repository settings
+3. Point your domain to GitHub Pages
+4. Customize the content in `src/App.tsx`
 
-This project is a fun, engaging "Under Construction" webpage. It includes:
+### Option 2: Download & Host
+1. Run `npm run build` 
+2. Upload the `dist` folder to your hosting
+3. Point your domain to the hosting
 
-This project provides a **fun and engaging "Under Construction" webpage**. It includes a **playful header**, an **animated progress bar**, and a **smooth gradient background**, all designed to entertain users while they wait for the site to go live. The page is fully customizable and responsive, making it an excellent choice for anyone needing a quick way to notify visitors that their site is under construction or in progress.
+## Multi-Domain Parking Setup
 
-Whether you're building a personal site, a business landing page, or just need something temporary while you work on a bigger project, this simple yet effective page can help you give visitors something cute and informative to look at!
+This repository can serve as a parking page for multiple domains simultaneously. Here's how to set it up:
 
----
+### GitHub Pages Limitation
+GitHub Pages only allows **one custom domain** in the repository settings. However, you can point multiple domains to the same GitHub Pages site using DNS configuration.
+
+### DNS Configuration for Additional Domains
+
+**For domains with CNAME support:**
+```dns
+Type: CNAME
+Name: @ (or www)
+Value: yourusername.github.io
+```
+
+**For apex domains (root domains) use A records:**
+```dns
+Type: A
+Name: @
+Value: 185.199.108.153
+Value: 185.199.109.153  
+Value: 185.199.110.153
+Value: 185.199.111.153
+```
+
+### Setup Process
+
+1. **Configure the primary domain** in GitHub Pages settings
+2. **Point additional domains** using DNS records above
+3. **All domains will show** the same maintenance page
+4. **Monitor domain status** - all will resolve to your GitHub Pages site
+
+### Moving Domains to Production
+
+When ready to launch a domain with its final site:
+
+1. **Update DNS records** to point to the new hosting
+2. **Remove from parking** - no changes needed in this repository
+3. **Keep other domains** - they continue showing the maintenance page
+4. **Test propagation** - DNS changes may take 24-48 hours
+
+### Benefits of This Approach
+
+- **Centralized management** - update one page, affects all domains
+- **Consistent branding** - same professional look across all domains  
+- **Zero maintenance** - no individual hosting for each domain
+- **Cost effective** - free GitHub Pages hosting
+- **Easy transition** - just change DNS when ready to launch
 
 ## Features
 
-- **Smooth Gradient Animation**: The background transitions through different shades of green, creating a vibrant, engaging effect.
-- **Animated Progress Bar**: The progress bar grows automatically over time to visually indicate the site's development.
-- **Responsive Design**: The page is fully responsive, so it looks great on both mobile and desktop devices.
-- **Easy Customization**: Update text, change icons, adjust colors, and more in just a few lines of code.
-- **MIT License**: Open-source, free to use, modify, or share.
+- **Responsive design** - works on all devices
+- **Dark/light mode** - automatic theme switching
+- **Contact links** - easily customizable social links
+- **Progress animation** - engaging visual element
+- **Fast loading** - optimized for quick display
 
----
+## Customization
 
-## Installation
+Edit `src/App.tsx` to change:
+- Your contact information (GitHub, Telegram, etc.)
+- The main text and messaging
+- Colors and styling
+- Progress bar behavior
 
-To get the project up and running locally, follow these simple steps:
+Most changes only require editing a few lines in the main component.
 
-1. **Clone the repository**:
+## Development
 
-   ```bash
-   git clone https://github.com/LeonByte/PurrfectSpaceUnderConstruction.git
-   ```
+```bash
+# Install dependencies
+npm install
+```
+```bash
+# Start development server  
+npm run dev
+```
+```bash
+# Build for production
+npm run build
+```
+```bash
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-2. **Navigate to the project directory**:
+### Built With
 
-   ```bash
-   cd PurrfectSpaceUnderConstruction
-   ```
+- React + TypeScript for reliability
+- Tailwind CSS for easy styling
+- Vite for fast development
+- GitHub Actions for automatic deployment
 
-3. **Open `index.html`** in your browser:
+## Domain Setup
 
-   - Simply open the `index.html` file in your preferred browser to view the page.
+### GitHub Pages Setup
+1. Go to repository Settings → Pages
+2. Select "Deploy from a branch"
+3. Choose `main` branch and `/dist` folder
+4. Your site will be available at `username.github.io/repository-name`
 
-   OR
+### Custom Domain
+1. Add a `CNAME` file in the `public` folder with your domain
+2. Configure DNS to point to GitHub Pages
+3. Enable "Enforce HTTPS" in Pages settings
 
-   You can also run a local server (e.g., using VS Code's live server extension) to view the site in a browser with live-reloading capabilities.
-
----
-
-## Usage
-
-Once you've got the project running locally, you can easily customize it to fit your needs:
-
-- **Update text**: Edit the `h1` and `p` tags in `index.html` to update the main message or add new text.
-- **Change icons**: You can replace the `<i>` tag classes to use any icon from FontAwesome or NerdFonts. This is helpful for personalizing the design with your own style.
-- **Modify the progress bar**: The progress bar's animation is controlled by the `script.js` file. By default, the bar increases by 10% every 2 seconds. You can adjust this value, or make the progress bar work based on real-time data, or modify it in any way you wish.
-- **Style changes**: The project is fully customizable via CSS. You can edit `style.css` to change the background gradient, colors, fonts, and overall look of the page.
-- **Additional functionality**: If you want to expand the project, feel free to add more features like countdown timers, additional animations, or other HTML5 elements to the page.
-
-For more advanced customization, consider adjusting the background gradient, adding more animations, or integrating dynamic elements.
-
----
+Detailed instructions: [GitHub Pages Custom Domain Guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 ## Contributing
 
-We welcome contributions! Here’s how you can help improve the project:
-
-### Bug Fixes and Features
-
-1. **Fork** the repository.
-2. **Clone** your fork to your local machine.
-3. Create a **new branch** for your feature or bugfix (`git checkout -b feature-name`).
-4. **Make your changes** and commit them (`git commit -am 'Add new feature'`).
-5. **Push to the branch** (`git push origin feature-name`).
-6. **Open a pull request** against the `main` branch.
-
-### Code Style
-
-- Please follow the existing code style for consistency (e.g., indentation, variable naming).
-- If you add any new functionality, try to include tests where applicable.
-
-### Reporting Issues
-
-If you find any bugs or have suggestions, feel free to open an **issue** on the repository. Please make sure to provide a clear description of the problem, including any relevant screenshots or code snippets.
-
----
+Found a bug or want to add a feature? Pull requests are welcome! This project aims to stay simple and focused, so new features should enhance the core use case of domain parking.
 
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-Feel free to fork, use, or modify this project for personal or commercial purposes. Please provide attribution to the original repository.
-
----
-
-## Links
-
-- **Live Demo**: [View the Under Construction page live on GitHub Pages](https://leonbyte.github.io/PurrfectSpaceUnderConstruction)
-- **Personal Website**: [eRobert](https://erobert.se)
-- **GitHub Repository**: [https://github.com/LeonByte/PurrfectSpaceUnderConstruction](https://github.com/LeonByte/PurrfectSpaceUnderConstruction)
-
----
+[MIT LICENSE](LICENSE) - feel free to use this for your own domains and projects.
 
 ## Contact
 
-- **Author**: [LeonByte](https://github.com/LeonByte)
+- **GitHub**: [@LeonByte](https://github.com/LeonByte)
 - **Telegram**: [@LE0Nbyte](https://t.me/LE0Nbyte)
 - **Signal**: [@LeonByte.01](https://signal.me/#eu/MhNhKmpFitQ7EgMlhZjj4Fsa5iUDsjuBC1cVQEq0houuu7EGb8FC0qp5v0768BW-)
 
-Feel free to reach out if you have any questions, suggestions, or if you'd just like to say "hi"!
-
 ---
 
-## Acknowledgments
+<div align="center">
+  <sub>A practical solution for domain parking 🐾 with a touch of personality. • <a href="#quick-setup">Get Started</a> • <a href="https://github.com/LeonByte/PurrfectSpaceUnderConstruction/issues">Report Bug</a> • <a href="https://github.com/LeonByte/PurrfectSpaceUnderConstruction/issues">Request Feature</a></sub>
+</div>
 
-- **FontAwesome**: For providing high-quality icons.
-- **Nerd Fonts**: For offering extended icon sets, including useful symbols for developers.
-- **Google Fonts**: For providing beautiful, open-source fonts.
-- **W3C**: For HTML5 and CSS3 specifications.
-- **MIT License**: For making this project open-source.
-
----

@@ -1,0 +1,84 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient for the circle -->
+    <radialGradient id="mainGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#6B46C1;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Outer glow gradient -->
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#6B46C1;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <!-- Star gradient -->
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Transparent background for GitHub compatibility -->
+  
+  <!-- Outer glow effect -->
+  <circle cx="100" cy="100" r="75" fill="url(#glowGradient)"/>
+  
+  <!-- Main circle -->
+  <circle cx="100" cy="100" r="60" fill="url(#mainGradient)"/>
+  
+  <!-- Cat face -->
+  <g transform="translate(100, 100)">
+    <!-- Cat head outline -->
+    <path d="M -20 -15 Q -25 -25 -15 -25 Q -10 -30 0 -25 Q 10 -30 15 -25 Q 25 -25 20 -15 Q 22 0 15 15 Q 0 20 -15 15 Q -22 0 -20 -15 Z" fill="white" opacity="0.95"/>
+    
+    <!-- Cat ears -->
+    <path d="M -15 -25 L -12 -18 L -8 -22 Z" fill="white"/>
+    <path d="M 15 -25 L 12 -18 L 8 -22 Z" fill="white"/>
+    
+    <!-- Inner ears -->
+    <path d="M -13 -22 L -11 -19 L -9 -21 Z" fill="#8B5CF6"/>
+    <path d="M 13 -22 L 11 -19 L 9 -21 Z" fill="#8B5CF6"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-8" cy="-8" rx="3" ry="4" fill="#6B46C1"/>
+    <ellipse cx="8" cy="-8" rx="3" ry="4" fill="#6B46C1"/>
+    
+    <!-- Eye highlights -->
+    <ellipse cx="-7" cy="-9" rx="1" ry="1.5" fill="white" opacity="0.8"/>
+    <ellipse cx="9" cy="-9" rx="1" ry="1.5" fill="white" opacity="0.8"/>
+    
+    <!-- Nose -->
+    <path d="M -2 0 Q 0 -3 2 0 Q 0 2 -2 0 Z" fill="#8B5CF6"/>
+    
+    <!-- Mouth -->
+    <path d="M 0 2 Q -4 6 -8 4" stroke="#6B46C1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 0 2 Q 4 6 8 4" stroke="#6B46C1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Whiskers -->
+    <line x1="-18" y1="-2" x2="-25" y2="-4" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="-18" y1="2" x2="-25" y2="2" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="18" y1="-2" x2="25" y2="-4" stroke="white" stroke-width="1" opacity="0.7"/>
+    <line x1="18" y1="2" x2="25" y2="2" stroke="white" stroke-width="1" opacity="0.7"/>
+  </g>
+  
+  <!-- Decorative stars -->
+  <g transform="translate(45, 35)">
+    <path d="M 0 -8 L 2 -2 L 8 -2 L 3 2 L 5 8 L 0 4 L -5 8 L -3 2 L -8 -2 L -2 -2 Z" fill="url(#starGradient)" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(155, 45) scale(0.6)">
+    <path d="M 0 -8 L 2 -2 L 8 -2 L 3 2 L 5 8 L 0 4 L -5 8 L -3 2 L -8 -2 L -2 -2 Z" fill="url(#starGradient)" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(35, 150) scale(0.4)">
+    <path d="M 0 -8 L 2 -2 L 8 -2 L 3 2 L 5 8 L 0 4 L -5 8 L -3 2 L -8 -2 L -2 -2 Z" fill="url(#starGradient)" opacity="0.5"/>
+  </g>
+  
+  <g transform="translate(170, 140) scale(0.7)">
+    <path d="M 0 -8 L 2 -2 L 8 -2 L 3 2 L 5 8 L 0 4 L -5 8 L -3 2 L -8 -2 L -2 -2 Z" fill="url(#starGradient)" opacity="0.7"/>
+  </g>
+</svg>

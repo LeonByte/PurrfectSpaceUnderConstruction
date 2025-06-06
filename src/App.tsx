@@ -560,7 +560,7 @@ function App() {
             </div>
             <div className="flex items-center gap-1">
               <motion.a 
-                href="https://erobert.se" 
+                href="https://github.com/LeonByte" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`font-bold transition-colors whitespace-nowrap ${
